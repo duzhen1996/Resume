@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Zhen Du</title>
+	<link href="https://cdn.bootcss.com/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #fff;
+}
+
+*:not(.fa){
+	font-family: Baskerville, "Times New Roman", serif;
+}
+
+@media screen and (max-width: 1000px){
+	.header{
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	.header{
+		min-width: 1000px;
+	}
+}
+
+.header{
+	height: auto;
+	background-color: #333;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.header>h1,
+.header>h2,
+.header>h3{
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.header>h1{
+	color: #fff;
+	font-size: 36px;
+
+	margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1000px){
+	.header>h2{
+		font-size: 22px;
+	}
+
+	.header>h3{
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	.header>h2{
+		font-size: 28px;
+	}
+
+	.header>h3{
+		font-size: 24px;
+	}
+}
+
+
+.header>h2{
+	color: #ddd;
+	margin-bottom: 10px;
+}
+
+.header>h3{
+	color: #ddd;
+}
+
+@media print {
+	.header{
+		background-color: #fff;
+	}
+
+	.header>h1,
+	.header>h2,
+	.header>h3{
+		color: #333;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.main{
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	.main{
+		width: 1000px;
+	}
+}
+
+.main{
+	height: auto;
+	margin: auto;
+	padding: 50px;
+}
+
+.main>h2{
+	width: 100%;
+	padding-left: 60px;
+	color: #000;
+	font-size: 28px;
+	line-height: 50px;
+	display: block;
+	position: relative;
+}
+
+.main>h2>i{
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: -25px;
+	border-radius: 50%;
+	line-height: 50px;
+	text-align: center;
+	font-size: 20px;
+	background-color: #333;
+	color: #fff;
+}
+
+.contentContainer{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-left: 1px dashed #333;
+	padding-left: 60px;
+}
+
+.education,
+.skill,
+.project{
+	margin-bottom: 30px;
+
+	position: relative;
+}
+.education::before,
+.skill::before,
+.project::before,
+.character::before{
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: -70px;
+	border-radius: 50%;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	background-color: #333;
+	color: #fff;
+}
+
+.education{
+	counter-increment: education;
+}
+.education::before{
+	content: counter(education);
+}
+
+.education>h3{
+	display: block;
+	width: 100%;
+}
+
+.education>h3>span{
+	margin-right: 10px;
+
+}
+
+.education>h3>span.institution{
+	font-size: 24px;
+	color: #000;
+}
+.education>h3>span.degree{
+	font-size: 22px;
+	color: #333;
+}
+
+.education>p{
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+	font-size: 18px;
+	line-height: 30px;
+	color: #000;
+}
+
+.education>p>span{
+	margin-right: 5px;
+}
+
+.skill{
+	counter-increment: skill;
+}
+.skill::before{
+	content: counter(skill);
+}
+
+.skill>p{
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	color: #000;
+	line-height: 30px;
+}
+
+.character{
+	counter-increment: project;
+}
+
+.project{
+	counter-increment: project;
+}
+.project::before{
+	content: counter(project);
+}
+
+.project>h3{
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+	font-size: 24px;
+	color: #000;
+}
+
+.project>h3{
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+	font-size: 24px;
+	color: #000;
+}
+
+.project>h3>.small{
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+	font-size: 10px;
+	color: #000;
+}
+
+.project>h3>span{
+	margin-right: 10px;
+}
+
+.project>p{
+	display: block;
+	width: 100%;
+}
+
+.project>p.position,
+.project>p.time{
+	font-size: 20px;
+	color: #666;
+	margin-bottom: 15px;
+}
+
+.project>p>span{
+	margin-right: 10px;
+}
+
+.project>p.description{
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 10px;
+	line-height: 30px;
+}
+
+@media screen and (max-width: 1000px){
+	.footer{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	.footer{
+		width: 1000px;
+	}
+}
+
+
+.footer{
+	margin: auto;
+	margin-top: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-top: 1px dashed #000;
+}
+
+.footer>p{
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 10px;
+}
+
+.footer>p>a{
+	color: #000;
+	opacity: 0.75;
+}
+
+.footer>p>a:hover{
+	opacity: 0.9;
+}
+
+@media print {
+	.footer{
+		display: none;
+	}
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<h1>杜臻</h1>
+		<h2>ZhenDuNGU@foxmail.com</h2>
+		<h3>Beijing , China</h3>
+	</div><div class="main">
+		<h2><i class="fa fa-university"></i><span>教育经历</span></h2>
+		<div class="contentContainer">
+			<div class="education">
+				<h3><span class="institution">东南大学（南京）</span><span class="degree">   软件工程 本科 2014-2018</span></h3>
+				<p><span> </span></p>
+				<p>绩点3.5，年级排名前20（共150人）</p>
+				<p><span> </span></p>
+				<p>从大二起在东南大学网络与信息安全实验室（江苏省重点实验室）跟班学习、参与一些项目。同时还是大学i++本科实验室的成员。</p>
+			</div>
+		</div>
+		<h2><i class="fa fa-cogs"></i><span>技能</span></h2>
+		<div class="contentContainer">
+			<div class="skill"><p>掌握C++与C语言，了解Python并能进行一定的开发。</p></div>
+			<div class="skill">
+				<p>Web的前端开发，包括JavaScript、CSS、HTML、JQuery；能使用Bootstrap框架以及其他的前端插件进行网页前端开发。</p>
+			</div>
+			<div class="skill"><p>Java Web后端开发，使用Spring。</p></div>
+			<div class="skill"><p>对于GPU有一定了解，能应用CUDA编程。</p></div>
+			<div class="skill"><p>熟悉Docker，可基于Docker进行一定的二次开发。</p></div>
+			<div class="skill"><p>有一定的源码研究能力，曾做过CTP通信协议的源码研究。</p></div>
+			<div class="skill"><p>有一定的项目领导能力，担任过两个项目的负责人，并在校级比赛中获奖。</p></div>
+		</div>
+		<h2><i class="fa fa-trophy"></i><span>项目经历</span></h2>
+		<div class="contentContainer">
+			<div class="project"><h3><span>基于Docker与X11的云操作系统---AntOS</span></h3><p class="position"><span>独立开发者。</span></p><p class="time">2016年4月到2017年3月 （大三）</p><p class="description">项目设计论文[<a href="https://github.com/duzhen1996/AntOS-Paper/blob/master/杜臻CSCWD投稿.docx?raw=true">链接</a>]，入选 2017 IEEE 21st International Conference on Computer supported Cooperative Work in Design (CSCWD 2017,SCI认证的C类会议)，得到会议邀请函[<a href="https://github.com/duzhen1996/AntOS-Paper/raw/master/Zhen%20Du.pdf">链接</a>]。</p>
+				<p class="description">基于Docker与X11的云操作系统。致力于解决ChromeOS应用少，功能性不足的问题。AntOS使用X协议来进行软件GUI图像传送，使用Docker进行后台性能的分配。</p>
+			</div>
+			<div class="project"><h3><span>云视窗</span></h3><p class="position"><span>项目团队领导与核心开发者。</span></p><p class="time">2016年8月 （大三）</p><p class="description">东南大学2016年度计算机学院和软件学院实训项目第二名，最佳技术奖。</p>
+			<p class="description">使用VNC的可视化云平台原型。使用Web技术，在传统的云平台技术的基础上加入可视化的桌面系统。</p></div>
+			<div class="project"><h3><span>聚合树通信协议源码研究</span></h3><p class="time">2016年6月到2016年8月 （大二）</p><p class="description">发CSDN博文[<a href="http://blog.csdn.net/qq_28980757/article/details/52169377">链接</a>]。</p>
+				<p class="description">聚合树协议，简称CTP协议。一种不基于路由的通信协议，根据通信节点位置可以形成灵活的拓扑结构。</p>
+			</div>
+			<div class="project"><h3><span>广告投放系统</span></h3><p class="position"><span>项目核心开发者。</span></p><p class="time">2016年5月到2016年6月 （大二）</p><p class="description">外包项目。嵌入式+web。</p></div>
+			<div class="project"><h3><span>基于GlusterFS的云存储系统</span></h3><p class="position"><span>项目主要开发者</span></p><p class="time">2015年9月到2016年3月 （大二）</p><p class="description">全国大学生云计算创新应用大赛华东地区第5名（3等奖）。东南大学网络与信息安全实验室外包项目。</p></div>
+			<div class="project"><h3><span>某事业单位的管理系统</span></h3><p class="position"><span>项目主要开发者。</span></p><p class="time">2015年9月到2015年11月 （大二）</p><p class="description">外包项目。</p></div>
+			<div class="project"><h3><span>东南大学校史知识竞赛答题系统招标</span></h3><p class="position"><span>项目团队领导与核心开发者。</span></p><p class="time">2015年3月到2015年5月 （大一）</p><p class="description">校级比赛第二名。</p></div>
+		</div>
+
+		<h2><i class="fa fa-male"></i><span>性格特点</span></h2>
+
+		<div class="contentContainer">
+			<div class="project"><h3><span>有信念</span><span style="font-size:75%">追求意义感，要当最好的开发者，做高逼格的东西，不当风口的猪。</span></h3>
+			</div>
+			<div class="project"><h3><span>爱钻研</span><span style="font-size:75%">对未知好奇，注意自主学习，选修专业课都按必修标准学，追求"黑科技"，喜欢绞脑浆的感觉。</span></h3>
+			</div>
+			<div class="project"><h3><span>有毅力</span><span style="font-size:75%">定下的事情能坚持到底，大学期间上课日每天晨跑。</span></h3>
+			</div>
+			<div class="project"><h3><span>守信用</span><span style="font-size:75%">答应的事情会想方设法完成，是同学们搞项目最愿意找的人之一。</span></h3>
+			</div>
+			<div class="project"><h3><span>耐寂寞</span><span style="font-size:75%">不好交往，喜欢泡实验室、图书馆，大都12点后才回宿舍。</span></h3>
+			</div>
+	</div>
+
+			<div class="footer"><p><span>我的项目在github上:</span>
+				<a href="https://github.com/duzhen1996">https://github.com/duzhen1996</a></p>
+			</div>
+		</body>
+
+		<script src="https://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</html>
